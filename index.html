@@ -9,214 +9,190 @@
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-    }
+/* --- 全体スタイル --- */
+body {
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: linear-gradient(180deg, #f9fafc 0%, #eef4f7 100%);
+}
 
-    header {
-        background: linear-gradient(90deg, #007acc, #005fa3);
-        color: #fff;
-        padding: 30px 0;
-        text-align: center;
-    }
+/* --- ヘッダー --- */
+header {
+  background: linear-gradient(90deg, #8fbcd4, #6ba5c2);
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-    header h1 {
-        margin: 0;
-        font-size: 28px;
-    }
+header h1 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
 
-    header p {
-        margin: 5px 0 0;
-        font-size: 16px;
-    }
+header p {
+  margin: 8px 0 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
 
-    section {
-        padding: 20px;
-        max-width: 1000px;
-        margin: 20px auto;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 8px;
-        box-sizing: border-box;
-        backdrop-filter: blur(5px);
-    }
+/* --- セクション --- */
+section {
+  padding: 40px 25px;
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  backdrop-filter: blur(8px);
+}
 
-    h2 {
-        color: #007acc;
-        border-left: 6px solid #007acc;
-        padding-left: 10px;
-        margin-bottom: 15px;
-    }
+h2 {
+  color: #5d91b1;
+  border-left: 6px solid #5d91b1;
+  padding-left: 12px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
 
-    /* --- スキルテーブル --- */
-    .table-wrapper {
-        overflow-x: auto;
-        margin: 0 auto;
-        border: 2px solid #007acc;
-        border-radius: 8px;
-        padding: 10px;
-        background-color: #fff;
-    }
+/* --- スキルテーブル --- */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0 auto;
+  border: 1px solid #bcd5e3;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+}
 
-    .table-wrapper table {
-        width: 100%;
-        border-collapse: collapse;
-    }
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-    .table-wrapper th, .table-wrapper td {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: left;
-    }
+.table-wrapper th, .table-wrapper td {
+  border: 1px solid #d9e6ef;
+  padding: 12px;
+  text-align: left;
+}
 
-    .table-wrapper th {
-        background-color: #007acc;
-        color: #fff;
-    }
+.table-wrapper th {
+  background-color: #a4c8dc;
+  color: #fff;
+  font-weight: 600;
+}
 
-    .table-wrapper tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
+.table-wrapper tr:nth-child(even) {
+  background-color: #f5f9fc;
+}
 
-    /* --- プロジェクトカード --- */
-    .project-card {
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        background: #fff;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+/* --- プロジェクトカード --- */
+.project-card {
+  border: 1px solid #e0ebf2;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
 
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+/* --- ボタン --- */
+a.button {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #6ba5c2;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
 
-    .project-card h3 {
-        color: #007acc;
-        margin-top: 0;
-    }
+a.button:hover {
+  background: #588ca9;
+}
 
-    a.button {
-        display: inline-block;
-        padding: 10px 15px;
-        background: #007acc;
-        color: #fff;
-        border-radius: 5px;
-        text-decoration: none;
-        margin-top: 10px;
-    }
+/* --- フッター --- */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #44697d;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
 
-    a.button:hover {
-        background: #005fa3;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #333;
-        color: #fff;
-    }
-
-    @media (max-width: 600px) {
-        header h1 { font-size: 20px; }
-        h2 { font-size: 16px; }
-        .table-wrapper th, .table-wrapper td { padding: 8px; font-size: 11px; }
-    }
+/* --- スマホ対応 --- */
+@media (max-width: 600px) {
+  header h1 { font-size: 22px; }
+  h2 { font-size: 18px; }
+  section { padding: 25px 15px; }
+}
 </style>
 </head>
 
 <body>
 
-<header data-aos="fade-right" data-aos-delay="0">
-    <h1>山下勇磨 ポートフォリオ</h1>
-    <p>Web開発・業務・クラウド系SE志望</p>
+<header data-aos="fade-up" data-aos-delay="0">
+  <h1>山下勇磨 ポートフォリオ</h1>
+  <p>Web開発・業務・クラウド系SE志望</p>
 </header>
 
-<section id="skills" data-aos="fade-right" data-aos-delay="1000">
-    <h2>スキル一覧</h2>
-    <div class="table-wrapper">
-        <table>
-            <tr>
-                <th>カテゴリ</th>
-                <th>スキル</th>
-                <th>レベル / 経験</th>
-            </tr>
-            <tr>
-                <td>プログラミング</td>
-                <td>Java, HTML, CSS, JavaScript</td>
-                <td>基礎〜実務レベル</td>
-            </tr>
-            <tr>
-                <td>フレームワーク</td>
-                <td>Spring Boot、GAS など</td>
-                <td>基礎理解学習</td>
-            </tr>
-            <tr>
-                <td>ツール</td>
-                <td>Eclipse, VSCode, GitHub, ChatGPT, Wix Editor</td>
-                <td>課題・個人開発経験</td>
-            </tr>
-            <tr>
-                <td>制御・回路</td>
-                <td>PLC, シーケンス制御, 回路設計</td>
-                <td>実務経験あり</td>
-            </tr>
-            <tr>
-                <td>Web・ショップページ改善</td>
-                <td>Wix, BASE, Amazon</td>
-                <td>個人プロジェクト</td>
-            </tr>
-        </table>
-    </div>
+<section id="skills" data-aos="fade-up" data-aos-delay="500">
+  <h2>スキル一覧</h2>
+  <div class="table-wrapper">
+    <table>
+      <tr>
+        <th>カテゴリ</th>
+        <th>スキル</th>
+        <th>レベル / 経験</th>
+      </tr>
+      <tr><td>プログラミング</td><td>Java, HTML, CSS, JavaScript</td><td>基礎〜実務レベル</td></tr>
+      <tr><td>フレームワーク</td><td>Spring Boot、GAS など</td><td>基礎理解学習</td></tr>
+      <tr><td>ツール</td><td>Eclipse, VSCode, GitHub, ChatGPT, Wix Editor</td><td>課題・個人開発経験</td></tr>
+    </table>
+  </div>
 </section>
 
-<section id="projects">
-    <h2 data-aos="fade-right" data-aos-delay="400">個人プロジェクト事例</h2>
+<section id="projects" data-aos="fade-up" data-aos-delay="1000">
+  <h2>個人プロジェクト事例</h2>
 
-    <div class="project-card" data-aos="fade-right" data-aos-delay="1400">
-        <h3>A. Web開発</h3>
-        <p><strong>概要：</strong>Wixサイト構築、HTML/CSS/JavaScriptでの静的ページ作成</p>
-        <p><strong>使用技術：</strong>HTML, CSS, JavaScript, VSCode, GitHub</p>
-        <p><strong>成果：</strong>WIX埋め込み用ページデザイン改善</p>
-        <a class="button" href="https://gist.github.com/appvoss/e992a73256dfebe4b8e95d172f598121" target="_blank">GitHubを見る</a>
-        <a class="button" href="https://www.aplamodel-fishing.com/" target="_blank">Webサイトを見る</a>
-    </div>
+  <div class="project-card">
+    <h3>A. Web開発</h3>
+    <p><strong>概要：</strong>Wixサイト構築、HTML/CSS/JavaScriptでの静的ページ作成</p>
+    <p><strong>使用技術：</strong>HTML, CSS, JavaScript, VSCode, GitHub</p>
+    <p><strong>成果：</strong>WIX埋め込み用ページデザイン改善</p>
+    <a class="button" href="https://gist.github.com/appvoss/e992a73256dfebe4b8e95d172f598121" target="_blank">GitHubを見る</a>
+    <a class="button" href="https://www.aplamodel-fishing.com/" target="_blank">Webサイトを見る</a>
+  </div>
 
-    <div class="project-card" data-aos="fade-right" data-aos-delay="2000">
-        <h3>B. 制御・組み込み系</h3>
-        <p><strong>概要：</strong>PLCシーケンス制御設計、動力盤・計装盤設計</p>
-        <p><strong>使用技術：</strong>シーケンス図面作成、回路設計、PLC接続設計</p>
-        <p><strong>成果：</strong>新規設備ライン立ち上げ、信号取込設計、改善提案</p>
-    </div>
+  <div class="project-card">
+    <h3>B. 制御・組み込み系</h3>
+    <p><strong>概要：</strong>PLCシーケンス制御設計、動力盤・計装盤設計</p>
+    <p><strong>使用技術：</strong>シーケンス図面作成、回路設計、PLC接続設計</p>
+    <p><strong>成果：</strong>新規設備ライン立ち上げ、信号取込設計、改善提案</p>
+  </div>
 </section>
 
-<section id="education" data-aos="fade-right" data-aos-delay="2800">
-    <h2>学習・資格</h2>
-    <ul>
-        <li>学習：Java, HTML/CSS, JavaScript, SQL, MVC</li>
-        <li>資格（取得予定）：基本情報技術者試験（FE）</li>
-    </ul>
-
-    <h3>現在挑戦中・成長中のスキル</h3>
-    <ul>
-        <li>実務レベルのプログラミング経験をさらに積み、効率的な開発手法を習得中</li>
-        <li>業務改善・プロジェクト推進の経験を増やし、チームでの成果創出に挑戦中</li>
-    </ul>
+<section id="education" data-aos="fade-up" data-aos-delay="1500">
+  <h2>学習・資格</h2>
+  <ul>
+    <li>学習：Java, HTML/CSS, JavaScript, SQL, MVC</li>
+    <li>資格（取得予定）：基本情報技術者試験（FE）</li>
+  </ul>
 </section>
 
-<section id="contact" data-aos="fade-right" data-aos-delay="3600">
-    <h2>連絡先</h2>
-    <p>Email: aplamodel@outlook.com</p>
+<section id="contact" data-aos="fade-up" data-aos-delay="2000">
+  <h2>連絡先</h2>
+  <p>Email: <a href="mailto:aplamodel@outlook.com">aplamodel@outlook.com</a></p>
 </section>
 
-<footer data-aos="fade-right" data-aos-delay="4400">
-    <p>© 2025 山下勇磨</p>
+<footer data-aos="fade-up" data-aos-delay="2500">
+  <p>© 2025 山下勇磨</p>
 </footer>
 
 <!-- ✅ AOSスクリプト -->
@@ -224,11 +200,11 @@
 <script>
 window.addEventListener('load', function() {
   AOS.init({
-    duration: 6000,
-    once: true,
-    easing: 'ease-out-sine'
+    duration: 1500, // ゆったり浮かび上がる
+    once: true,      // 一度だけ再生
+    easing: 'ease-in-out', // 柔らかい始まりと終わり
+    offset: 100
   });
-  AOS.refresh();
 });
 </script>
 
