@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>山下勇磨 ポートフォリオ</title>
 
-<!-- ✅ AOS（Animate On Scroll） -->
+<!-- ✅ AOSライブラリ -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
@@ -24,13 +24,14 @@ header {
   color: #fff;
   padding: 40px 0;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 header h1 {
   margin: 0;
   font-size: 32px;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 header p {
@@ -46,9 +47,8 @@ section {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
   padding: 40px 60px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
   backdrop-filter: blur(8px);
-  transform: translateY(20px);
   transition: transform 0.8s ease-out, opacity 1s ease-out;
 }
 
@@ -60,6 +60,36 @@ h2 {
   font-weight: 600;
 }
 
+/* --- スキルテーブル --- */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0 auto;
+  border: 2px solid #007acc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-wrapper th, .table-wrapper td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.table-wrapper th {
+  background-color: #007acc;
+  color: #fff;
+}
+
+.table-wrapper tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
 /* --- プロジェクトカード --- */
 .project-card {
   border: 1px solid #ddd;
@@ -68,7 +98,7 @@ h2 {
   margin-bottom: 30px;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
 
 .project-card:hover {
@@ -91,11 +121,12 @@ a.button {
   border-radius: 8px;
   text-decoration: none;
   margin-top: 10px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 a.button:hover {
   background: #005fa3;
+  transform: translateY(-2px);
 }
 
 /* --- フッター --- */
@@ -124,42 +155,46 @@ footer {
   <p>Web開発・業務・クラウド系SE志望</p>
 </header>
 
-<section id="skills" data-aos="fade-up" data-aos-delay="800">
+<section id="skills" data-aos="fade-up" data-aos-delay="600">
   <h2>スキル一覧</h2>
-  <p>Java / HTML / CSS / JavaScript / Spring Boot / GitHub / ChatGPT</p>
+  <div class="table-wrapper">
+    <table>
+      <tr><th>カテゴリ</th><th>スキル</th><th>レベル / 経験</th></tr>
+      <tr><td>プログラミング</td><td>Java, HTML, CSS, JavaScript</td><td>基礎〜実務レベル</td></tr>
+      <tr><td>フレームワーク</td><td>Spring Boot、GAS など</td><td>基礎理解学習</td></tr>
+      <tr><td>ツール</td><td>Eclipse, VSCode, GitHub, ChatGPT, Wix Editor</td><td>課題・個人開発経験</td></tr>
+    </table>
+  </div>
 </section>
 
 <section id="projects">
-  <h2 data-aos="fade-right" data-aos-delay="1600">個人プロジェクト事例</h2>
+  <h2 data-aos="fade-right" data-aos-delay="1000">個人プロジェクト事例</h2>
 
-  <div class="project-card" data-aos="fade-right" data-aos-delay="2000">
+  <div class="project-card" data-aos="fade-right" data-aos-delay="1400">
     <h3>A. Web開発</h3>
-    <p><strong>概要：</strong>Wixサイト構築・HTML/CSS/JavaScript実装</p>
+    <p><strong>概要：</strong>Wixサイト構築、HTML/CSS/JavaScriptでの静的ページ作成</p>
+    <p><strong>使用技術：</strong>HTML, CSS, JavaScript, VSCode, GitHub</p>
     <p><strong>成果：</strong>WIX埋め込み用ページデザイン改善</p>
-    <a class="button" href="https://gist.github.com/appvoss/e992a73256dfebe4b8e95d172f598121" target="_blank">GitHubを見る</a>
+    <a class="button" href="#" target="_blank">GitHubを見る</a>
   </div>
 
-  <div class="project-card" data-aos="fade-left" data-aos-delay="2800">
+  <div class="project-card" data-aos="fade-left" data-aos-delay="2000">
     <h3>B. 制御・組み込み系</h3>
-    <p><strong>概要：</strong>PLC制御設計・回路設計・信号取込システム</p>
-    <p><strong>成果：</strong>新規ライン立ち上げ、制御改善提案</p>
+    <p><strong>概要：</strong>PLCシーケンス制御設計、動力盤・計装盤設計</p>
   </div>
 </section>
 
-<section id="education" data-aos="fade-up" data-aos-delay="3600">
+<section id="education" data-aos="fade-up" data-aos-delay="2600">
   <h2>学習・資格</h2>
-  <ul>
-    <li>学習中：Java, SQL, Spring Boot</li>
-    <li>資格予定：基本情報技術者試験（FE）</li>
-  </ul>
+  <ul><li>Java, HTML/CSS, JavaScript, SQL, MVC</li></ul>
 </section>
 
-<section id="contact" data-aos="zoom-in" data-aos-delay="4400">
+<section id="contact" data-aos="zoom-in" data-aos-delay="3200">
   <h2>連絡先</h2>
   <p>Email: aplamodel@outlook.com</p>
 </section>
 
-<footer data-aos="fade-up" data-aos-delay="5200">
+<footer data-aos="fade-up" data-aos-delay="3800">
   <p>© 2025 山下勇磨</p>
 </footer>
 
@@ -168,10 +203,10 @@ footer {
 <script>
 window.addEventListener('load', function() {
   AOS.init({
-    duration: 2500,              // アニメーション時間（2.5秒）
+    duration: 3500,              // ← ゆっくり（3.5秒）
     once: true,                  // 一度だけ再生
     easing: 'ease-in-out-cubic', // 高級感のある滑らかさ
-    offset: 120                  // 画面下から少し見えてから発動
+    offset: 100
   });
 });
 </script>
