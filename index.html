@@ -5,131 +5,135 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>山下勇磨 ポートフォリオ</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-    }
+  /* --- ページ全体を透過させる --- */
+  html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: transparent !important;   /* ← 完全透過 */
+      background-color: transparent !important; /* ← どんな上書きも無視 */
+  }
 
-    header {
-        background: linear-gradient(90deg, #007acc, #005fa3);
-        color: #fff;
-        padding: 30px 0;
-        text-align: center;
-    }
+  header {
+      background: linear-gradient(90deg, #007acc, #005fa3);
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+      border-radius: 0 0 10px 10px;
+  }
 
-    header h1 {
-        margin: 0;
-        font-size: 28px;
-    }
+  header h1 {
+      margin: 0;
+      font-size: 28px;
+  }
 
-    header p {
-        margin: 5px 0 0;
-        font-size: 16px;
-    }
+  header p {
+      margin: 5px 0 0;
+      font-size: 16px;
+  }
 
-    section {
-        padding: 20px;
-        max-width: 1000px;
-        margin: 20px auto;
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 8px;
-        box-sizing: border-box;
-        backdrop-filter: blur(5px);
-    }
+  section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.8); /* 半透明カード */
+      border-radius: 8px;
+      box-sizing: border-box;
+      backdrop-filter: blur(5px);
+  }
 
-    h2 {
-        color: #007acc;
-        border-left: 6px solid #007acc;
-        padding-left: 10px;
-        margin-bottom: 15px;
-    }
+  h2 {
+      color: #007acc;
+      border-left: 6px solid #007acc;
+      padding-left: 10px;
+      margin-bottom: 15px;
+  }
 
-    /* --- スキルテーブル --- */
-    .table-wrapper {
-        overflow-x: auto;
-        margin: 0 auto;
-        border: 2px solid #007acc;
-        border-radius: 8px;
-        padding: 10px;
-        background-color: #fff;
-    }
+  /* --- スキルテーブル --- */
+  .table-wrapper {
+      overflow-x: auto;
+      margin: 0 auto;
+      border: 2px solid #007acc;
+      border-radius: 8px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.9); /* 少し透過 */
+  }
 
-    .table-wrapper table {
-        width: 100%;
-        border-collapse: collapse;
-    }
+  .table-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+  }
 
-    .table-wrapper th, .table-wrapper td {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: left;
-    }
+  .table-wrapper th, .table-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+  }
 
-    .table-wrapper th {
-        background-color: #007acc;
-        color: #fff;
-    }
+  .table-wrapper th {
+      background-color: #007acc;
+      color: #fff;
+  }
 
-    .table-wrapper tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
+  .table-wrapper tr:nth-child(even) {
+      background-color: rgba(249, 249, 249, 0.9);
+  }
 
-    /* --- プロジェクトカード --- */
-    .project-card {
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        background: #fff;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+  /* --- プロジェクトカード --- */
+  .project-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.9); /* ← 背景透ける */
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
 
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+  .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
 
-    .project-card h3 {
-        color: #007acc;
-        margin-top: 0;
-    }
+  .project-card h3 {
+      color: #007acc;
+      margin-top: 0;
+  }
 
-    .project-card p {
-        margin: 5px 0;
-    }
+  .project-card p {
+      margin: 5px 0;
+  }
 
-    a.button {
-        display: inline-block;
-        padding: 10px 15px;
-        background: #007acc;
-        color: #fff;
-        border-radius: 5px;
-        text-decoration: none;
-        margin-top: 10px;
-    }
+  a.button {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #007acc;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+  }
 
-    a.button:hover {
-        background: #005fa3;
-    }
+  a.button:hover {
+      background: #005fa3;
+  }
 
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #333;
-        color: #fff;
-    }
+  footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(51, 51, 51, 0.8); /* ← 半透明 */
+      color: #fff;
+  }
 
-    /* --- レスポンシブ対応 --- */
-    @media (max-width: 600px) {
-        header h1 { font-size: 20px; }
-        h2 { font-size: 16px; }
-        .table-wrapper th, .table-wrapper td { padding: 8px; font-size: 11px; }
-    }
+  @media (max-width: 600px) {
+      header h1 { font-size: 20px; }
+      h2 { font-size: 16px; }
+      .table-wrapper th, .table-wrapper td { padding: 8px; font-size: 11px; }
+  }
 </style>
+
 </head>
 
 <body>
