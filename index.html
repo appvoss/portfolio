@@ -16,16 +16,17 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background: linear-gradient(180deg, #f9fafc 0%, #eef4f7 100%);
+  background: transparent; /* 背景を透過 */
 }
 
 /* --- ヘッダー --- */
 header {
-  background: linear-gradient(90deg, #8fbcd4, #6ba5c2);
+  background: rgba(143,188,212,0.6); /* 半透明に変更 */
   color: #fff;
   padding: 40px 0;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
 }
 
 header h1 {
@@ -45,7 +46,7 @@ section {
   padding: 40px 25px;
   max-width: 900px;
   margin: 40px auto;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.6); /* 半透明白 */
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   backdrop-filter: blur(8px);
@@ -66,7 +67,7 @@ h2 {
   border: 1px solid #bcd5e3;
   border-radius: 8px;
   padding: 10px;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.8);
 }
 
 .table-wrapper table {
@@ -81,13 +82,13 @@ h2 {
 }
 
 .table-wrapper th {
-  background-color: #a4c8dc;
+  background-color: rgba(164,200,220,0.8);
   color: #fff;
   font-weight: 600;
 }
 
 .table-wrapper tr:nth-child(even) {
-  background-color: #f5f9fc;
+  background-color: rgba(245,249,252,0.8);
 }
 
 /* --- プロジェクトカード --- */
@@ -96,7 +97,7 @@ h2 {
   border-radius: 10px;
   padding: 25px;
   margin-bottom: 25px;
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
@@ -104,7 +105,7 @@ h2 {
 a.button {
   display: inline-block;
   padding: 10px 18px;
-  background: #6ba5c2;
+  background: rgba(107,165,194,0.9);
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
@@ -113,17 +114,18 @@ a.button {
 }
 
 a.button:hover {
-  background: #588ca9;
+  background: rgba(88,140,169,0.9);
 }
 
 /* --- フッター --- */
 footer {
   text-align: center;
   padding: 25px;
-  background: #44697d;
+  background: rgba(68,105,125,0.6); /* 半透明 */
   color: #fff;
   font-size: 14px;
   letter-spacing: 0.5px;
+  border-radius: 12px;
 }
 
 /* --- スマホ対応 --- */
@@ -200,9 +202,9 @@ footer {
 <script>
 window.addEventListener('load', function() {
   AOS.init({
-    duration: 1500, // ゆったり浮かび上がる
-    once: true,      // 一度だけ再生
-    easing: 'ease-in-out', // 柔らかい始まりと終わり
+    duration: 1500,
+    once: true,
+    easing: 'ease-in-out',
     offset: 100
   });
 });
