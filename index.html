@@ -78,9 +78,9 @@
         color: #fff;
     }
 
-    /* --- 💫 右からスライドインを強調 --- */
+    /* 💫 ゆっくり右からスライドイン */
     [data-aos="fade-left"] {
-        transform: translateX(80px);
+        transform: translateX(120px); /* 少し長めに滑る */
         opacity: 0;
         transition-property: transform, opacity;
     }
@@ -99,39 +99,39 @@
     <p>Web開発・業務・クラウド系SE志望</p>
 </header>
 
-<section id="skills" data-aos="fade-left" data-aos-delay="800">
+<section id="skills" data-aos="fade-left" data-aos-delay="1000">
     <h2>スキル一覧</h2>
     <p>主要スキルの一覧です。</p>
 </section>
 
 <section id="projects">
-    <h2 data-aos="fade-left" data-aos-delay="1600">個人プロジェクト事例</h2>
+    <h2 data-aos="fade-left" data-aos-delay="2000">個人プロジェクト事例</h2>
 
-    <div class="project-card" data-aos="fade-left" data-aos-delay="2400">
+    <div class="project-card" data-aos="fade-left" data-aos-delay="3000">
         <h3>A. Web開発</h3>
         <p><strong>概要：</strong>Wixサイト構築、HTML/CSS/JavaScriptでの静的ページ作成</p>
         <a class="button" href="https://gist.github.com/appvoss/e992a73256dfebe4b8e95d172f598121" target="_blank">GitHubを見る</a>
     </div>
 
-    <div class="project-card" data-aos="fade-left" data-aos-delay="3200">
+    <div class="project-card" data-aos="fade-left" data-aos-delay="4000">
         <h3>B. 制御・組み込み系</h3>
         <p><strong>概要：</strong>PLCシーケンス制御設計、回路設計など</p>
     </div>
 </section>
 
-<section id="education" data-aos="fade-left" data-aos-delay="4000">
+<section id="education" data-aos="fade-left" data-aos-delay="5000">
     <h2>学習・資格</h2>
     <ul>
         <li>Java, HTML/CSS, JS, SQLなどを継続学習中</li>
     </ul>
 </section>
 
-<section id="contact" data-aos="fade-left" data-aos-delay="4800">
+<section id="contact" data-aos="fade-left" data-aos-delay="6000">
     <h2>連絡先</h2>
     <p>Email: aplamodel@outlook.com</p>
 </section>
 
-<footer data-aos="fade-left" data-aos-delay="5600">
+<footer data-aos="fade-left" data-aos-delay="7000">
     <p>© 2025 山下勇磨</p>
 </footer>
 
@@ -140,10 +140,10 @@
 <script>
 window.addEventListener('load', function() {
   AOS.init({
-    duration: 6000,              // ゆっくり6秒
-    once: true,                  // 一度のみアニメーション
-    easing: 'ease-in-out-cubic', // 滑らかな動き
-    offset: 100                  // 少しスクロールしてから動く
+    duration: 18000,              // 💡 アニメーション時間：18秒（超ゆっくり）
+    once: true,                   // 一度だけ再生
+    easing: 'ease-in-out-sine',   // 滑らかで優しい動き
+    offset: 120                   // 少しスクロールしてから動作
   });
   AOS.refresh();
 });
