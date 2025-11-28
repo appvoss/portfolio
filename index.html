@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>山下勇磨 ポートフォリオ</title>
 
-<!-- ✅ AOS（Animate On Scroll） -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
@@ -16,12 +15,12 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background: transparent; /* 背景を透過 */
+  background: transparent;
 }
 
 /* --- ヘッダー --- */
 header {
-  background: rgba(143,188,212,0.6); /* 半透明に変更 */
+  background: rgba(143,188,212,0.6);
   color: #fff;
   padding: 40px 0;
   text-align: center;
@@ -29,24 +28,15 @@ header {
   border-radius: 12px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 30px;
-  letter-spacing: 1px;
-}
-
-header p {
-  margin: 8px 0 0;
-  font-size: 16px;
-  opacity: 0.9;
-}
+header h1 { margin: 0; font-size: 30px; }
+header p { margin: 8px 0 0; font-size: 16px; }
 
 /* --- セクション --- */
 section {
   padding: 40px 25px;
   max-width: 900px;
   margin: 40px auto;
-  background: rgba(255, 255, 255, 0.6); /* 半透明白 */
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   backdrop-filter: blur(8px);
@@ -63,7 +53,6 @@ h2 {
 /* --- スキルテーブル --- */
 .table-wrapper {
   overflow-x: auto;
-  margin: 0 auto;
   border: 1px solid #bcd5e3;
   border-radius: 8px;
   padding: 10px;
@@ -78,13 +67,11 @@ h2 {
 .table-wrapper th, .table-wrapper td {
   border: 1px solid #d9e6ef;
   padding: 12px;
-  text-align: left;
 }
 
 .table-wrapper th {
   background-color: rgba(164,200,220,0.8);
   color: #fff;
-  font-weight: 600;
 }
 
 .table-wrapper tr:nth-child(even) {
@@ -110,21 +97,15 @@ a.button {
   border-radius: 6px;
   text-decoration: none;
   margin-top: 10px;
-  transition: background 0.3s ease;
 }
-
-a.button:hover {
-  background: rgba(88,140,169,0.9);
-}
+a.button:hover { background: rgba(88,140,169,0.9); }
 
 /* --- フッター --- */
 footer {
   text-align: center;
   padding: 25px;
-  background: rgba(68,105,125,0.6); /* 半透明 */
+  background: rgba(68,105,125,0.6);
   color: #fff;
-  font-size: 14px;
-  letter-spacing: 0.5px;
   border-radius: 12px;
 }
 
@@ -139,13 +120,14 @@ footer {
 
 <body>
 
-<header data-aos="fade-up" data-aos-delay="0">
+<header data-aos="fade-up">
   <h1>山下勇磨 ポートフォリオ</h1>
   <p>Web開発・業務・クラウド系SE志望</p>
 </header>
 
-<section id="skills" data-aos="fade-up" data-aos-delay="500">
+<section id="skills" data-aos="fade-up" data-aos-delay="400">
   <h2>スキル一覧</h2>
+
   <div class="table-wrapper">
     <table>
       <tr>
@@ -153,35 +135,63 @@ footer {
         <th>スキル</th>
         <th>レベル / 経験</th>
       </tr>
-      <tr><td>プログラミング</td><td>Java, HTML, CSS, JavaScript</td><td>基礎〜実務レベル</td></tr>
-      <tr><td>フレームワーク</td><td>Spring Boot、GAS など</td><td>基礎理解学習</td></tr>
-      <tr><td>ツール</td><td>Eclipse, VSCode, GitHub, ChatGPT, Wix Editor</td><td>課題・実績や開発経験の蓄積</td></tr>
-      <tr><td>フルリモートワーク経験有り</td></td></tr>
+      <tr>
+        <td>プログラミング</td>
+        <td>Java, HTML, CSS, JavaScript</td>
+        <td>基礎〜実務レベル</td>
+      </tr>
+      <tr>
+        <td>フレームワーク</td>
+        <td>Spring Boot、GAS</td>
+        <td>基礎理解学習</td>
+      </tr>
+      <tr>
+        <td>ツール</td>
+        <td>Eclipse, VSCode, GitHub, ChatGPT, Wix Editor</td>
+        <td>課題・実績や開発経験の蓄積</td>
+      </tr>
+      <tr>
+        <td>その他</td>
+        <td>フルリモートワーク経験</td>
+        <td>あり</td>
+      </tr>
     </table>
   </div>
 </section>
 
-<section id="projects" data-aos="fade-up" data-aos-delay="1000">
+<section id="projects" data-aos="fade-up" data-aos-delay="800">
   <h2>個人プロジェクト事例</h2>
 
+  <!-- A -->
   <div class="project-card">
-    <h3>A. Web開発</h3>
+    <h3>A. ソフトウェア開発スキル</h3>
     <p><strong>概要：</strong>Wixサイト構築、HTML/CSS/JavaScriptでの静的ページ作成</p>
     <p><strong>使用技術：</strong>HTML, CSS, JavaScript, VSCode, GitHub</p>
-    <p><strong>成果：</strong>WIX埋め込み用ページデザイン改善</p>
+    <p><strong>成果：</strong>WIX埋め込み用ページ、SEO、LLOM改善</p>
+
     <a class="button" href="https://gist.github.com/appvoss/e992a73256dfebe4b8e95d172f598121" target="_blank">GitHubを見る</a>
     <a class="button" href="https://www.aplamodel-fishing.com/" target="_blank">Webサイトを見る</a>
   </div>
 
+  <!-- B -->
   <div class="project-card">
-    <h3>B. 制御・組み込み系</h3>
-    <p><strong>概要：</strong>PLCシーケンス制御設計、動力盤・計装盤設計</p>
+    <h3>B. ハードウェア制御・組み込み系スキル</h3>
+    <p><strong>概要：</strong>開発仕様設計、調達、改修設計、PLCシーケンス制御設計</p>
     <p><strong>使用技術：</strong>シーケンス図面作成、回路設計、PLC接続設計</p>
     <p><strong>成果：</strong>新規設備ライン立ち上げ、信号取込設計、改善提案</p>
   </div>
+
+  <!-- C -->
+  <div class="project-card">
+    <h3>C. デザインスキル</h3>
+    <p><strong>概要：</strong>画像編集加工、3Dモデリング、3Dプリンタ、スライスソフト</p>
+    <p><strong>使用技術：</strong>GIMP、Ultimaker Cura、DesignSparkMechanical、FDM式3Dプリンタ</p>
+    <p><strong>成果：</strong>オリジナルルアーの制作販売（店舗及びネットショップ）、リールスタンド（釣具カスタムパーツ）の設計開発と納品、SNS用画像編集 等</p>
+  </div>
+
 </section>
 
-<section id="education" data-aos="fade-up" data-aos-delay="1500">
+<section id="education" data-aos="fade-up" data-aos-delay="1200">
   <h2>学習・資格</h2>
   <ul>
     <li>学習：Java, HTML/CSS, JavaScript, SQL, MVC</li>
@@ -189,16 +199,15 @@ footer {
   </ul>
 </section>
 
-<section id="contact" data-aos="fade-up" data-aos-delay="2000">
+<section id="contact" data-aos="fade-up" data-aos-delay="1600">
   <h2>連絡先</h2>
   <p>Email: <a href="mailto:aplamodel@outlook.com">aplamodel@outlook.com</a></p>
 </section>
 
-<footer data-aos="fade-up" data-aos-delay="2500">
+<footer data-aos="fade-up" data-aos-delay="2000">
   <p>© 2025 山下勇磨</p>
 </footer>
 
-<!-- ✅ AOSスクリプト -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 window.addEventListener('load', function() {
